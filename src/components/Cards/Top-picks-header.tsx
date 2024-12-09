@@ -1,16 +1,23 @@
 import React from "react";
+type TopPickHeaderProps = {
+  title: string;
+  description: string;
+};
 
-
-
-    export default function TopPicksHeader() {
-        const title = "Top Picks";
-        const description = "Check out our top picks for you!";
-
+const TopPickHeader: React.FC<TopPickHeaderProps> = () => {
+  const title = "Top Picks";
+          const description = "Check out our top picks for you!"; 
   return (
     <div>
-      <h1 className=" text-4xl font-semibold">{title}</h1>
-      <p className=" text-lg  mt-5 text-[#9F9F9F]">{description}</p>
+      <h2 className="text-2xl font-bold">{title}</h2>
+      <p className="text-gray-600">{description}</p>
     </div>
   );
 };
+
+export default TopPickHeader;
+
+
+
+
 
